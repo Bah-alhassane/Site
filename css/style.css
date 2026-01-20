@@ -1,156 +1,63 @@
-/* =========================================================
-   GLOBAL
-   ========================================================= */
-
+/* ===== Style général ===== */
 body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: #ffffff;
-  color: #111;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;  /* sobre et lisible */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centre le contenu horizontalement */
+    background-color: #fdfdfd;
+    color: #111;
 }
 
-a {
-  color: #003366;
-  text-decoration: none;
+main {
+    max-width: 900px; /* largeur centrale */
+    padding: 80px 20px 40px; /* espace autour du contenu */
+    text-align: center;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* =========================================================
-   CONTAINER CENTRAL (équivalent .u-sheet-1)
-   ========================================================= */
-
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-/* =========================================================
-   HEADER / MENU
-   ========================================================= */
-
-header {
-  margin-bottom: 40px;
-}
-
-header h1 {
-  font-size: 2.2em;
-  margin-bottom: 5px;
-}
-
-header p {
-  margin-top: 0;
-  font-style: italic;
-}
-
+/* ===== Menu ===== */
 nav {
-  margin-top: 15px;
+    margin-top: 20px; /* décale un peu du haut */
+    margin-bottom: 40px;
+    display: flex;
+    gap: 30px; /* espace entre les liens */
 }
 
 nav a {
-  margin-right: 18px;
-  font-size: 1.05em;
+    text-decoration: none; /* pas de souligné */
+    color: #111; /* même couleur pour tous les liens */
+    font-size: 18px; /* taille un peu plus grande */
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-/* =========================================================
-   SECTION 1 — PRÉSENTATION + PHOTO
-   (équivalent .u-section-1)
-   ========================================================= */
-
-.hero {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  align-items: center;
-  margin-bottom: 60px;
+nav a:hover {
+    color: #0047ab; /* léger effet au survol */
 }
 
-.hero-text {
-  font-size: 1.05em;
+/* ===== Titres ===== */
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
 
-.hero-photo {
-  background-image: url("../assets/photo.jpg"); /* à remplacer */
-  background-size: cover;
-  background-position: center;
-  min-height: 320px;
-  border: 1px solid #ccc;
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
-/* =========================================================
-   SECTIONS GÉNÉRALES
-   (équivalent .u-section-2)
-   ========================================================= */
-
-section {
-  margin-bottom: 50px;
+/* ===== Paragraphes ===== */
+p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
-section h2 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-}
-
-/* =========================================================
-   LISTES (CV, projets, liens)
-   ========================================================= */
-
-ul {
-  padding-left: 20px;
-}
-
-li {
-  margin-bottom: 8px;
-}
-
-/* =========================================================
-   LIENS TYPE "BOUTONS" ACADÉMIQUES
-   (équivalent .u-btn-* sans le mauvais code)
-   ========================================================= */
-
-.link-list a {
-  display: block;
-  margin-bottom: 6px;
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
+/* ===== Footer ===== */
 footer {
-  margin-top: 60px;
-  font-size: 0.9em;
-  color: #555;
-}
-
-/* =========================================================
-   RESPONSIVE (tablettes & mobiles)
-   ========================================================= */
-
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-photo {
-    min-height: 400px;
-  }
-}
-
-@media (max-width: 600px) {
-  body {
-    font-size: 0.95em;
-  }
-
-  nav a {
-    display: inline-block;
-    margin-bottom: 5px;
-  }
+    margin-top: 60px;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #555;
 }
